@@ -12,6 +12,18 @@ namespace HomeEnergyApi.Models
             this.context = context;
         }
 
+        public bool IsHomeNull(Home? home)
+        {
+            if (home is null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public Home Save(Home home)
         {
             if (home.HomeUsageData != null)
